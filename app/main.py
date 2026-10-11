@@ -15,7 +15,7 @@ def calculate_profit(filename: str) -> None:
                 bought = Decimal(trade_session["bought"])
                 all_bought_money += bought * price
                 all_bought_coins += bought
-            elif trade_session["sold"] is not None:
+            if trade_session["sold"] is not None:
                 sold = Decimal(trade_session["sold"])
                 all_sold_money += sold * price
                 all_sold_coins += sold
